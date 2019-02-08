@@ -1,0 +1,94 @@
+body{
+	background-color: #363636;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+header{
+	color: #bab4ae;
+	background-color: #323232;
+}
+header>h1{
+	padding-left: 2rem;
+	padding-top: .2rem;
+	margin: 0px;
+}
+nav{
+	padding: 1rem 2rem 2rem 2rem;
+}
+nav>div{
+	float: left;
+	background-color: #212121; 
+	padding: 1rem;
+}
+nav>div:last-child{
+	float: none;
+}
+article{
+	margin: 0 auto;
+	width: 960px;
+}
+.container{
+	background-color: white;
+	padding-top :2rem;
+	color: #9e9fa1;
+	padding-bottom: 2rem;
+}
+.big-div{
+	background-color: #323232;
+	height: 360px;
+	text-align: center;
+}
+.big-div>h2,.image>h2{
+	color: #bab4ae;
+	top:50%;
+	position: relative;
+	margin: 0px;
+}
+.small-div{
+	margin: 2rem auto;
+	background-color: #eeeeee;
+	color: #bebebe;
+	word-spacing: .03rem;
+	padding: 1rem;
+	font-size: 1.0rem;
+	font-weight: bold;
+	font-family: monospace;
+}
+.gallery{
+	margin-top: 1.2rem;
+	display: flex;
+	text-align: center;
+}
+.photo{
+	margin-right: 25px; 
+	border: white solid 0.2rem;
+	outline: #eeeeee solid .01rem;
+}
+.photo:last-child{
+	margin-right: 0rem;
+}
+.caption{
+	background-color: #eeeeee;
+	padding : 0.5rem;
+	margin: 0;
+}
+.image{
+	width: 215px;
+	height: 315px;
+	background-color: #323232;
+}
+footer{
+	background-color: #212121;
+	color: #767879;
+	float: left;
+	width: 100%;
+	margin-top: 1rem;
+}
+.copy{
+	padding-left: 7rem;
+	float: left;
+}
+.layout{
+	padding-right: 7rem;
+	float: right;
+}
