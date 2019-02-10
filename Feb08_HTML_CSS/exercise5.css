@@ -1,0 +1,23 @@
+#employee {
+	border:none;
+	width: 100%;
+}
+
+#employee td, #employee th {
+	padding: 1rem;
+}
+
+#employee tr:nth-child(even){
+	background-color: lightgrey;
+}
+
+#employee tr:hover {
+	background-color: grey;
+	color:white;
+}
+
+#employee th {
+	text-align: left;
+	background-color: lightblue;
+	color: grey;
+}
