@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercise Question 2</title>
+	<style type="text/css">
+</style>
+<link rel="stylesheet" type="text/css" href="exercise2.css"/>
+</head>
+<body>
+	<header>
+		<h1 class="heading">
+			To The New
+		</h1>
+		<nav>
+			<div>Home</div>
+			<div>Quick Help</div>
+		</nav>
+		<hr>
+	</header>
+	<div class="container">
+		<article>
+			<h2>
+				Bug Report
+			</h2>
+			<form action="#">
+				<div class="input">
+					<label for="title">Title:*</label>
+					<!-- <input type="text" name="title" required="required" id="title" autofocus="autofocus" /> -->
+				</div>
+				<div class="input">
+					<label for="description">Description:*</label>
+					<textarea title="description" id="description" name="description" rows="10" required="required">
+					</textarea>
+				</div>
+				<div class="input">
+					<label for="os">Operating System:</label>
+					<select id="os" name="os">
+						<option>
+							Windows XP
+						</option>
+						<option>
+							Ubuntu
+						</option>
+						<option>
+							Windows 10
+						</option>
+					</select>
+				</div>
+				<div class="input">
+					<label for="pro">Product:*</label>
+					<select name="pro" id="pro" required="required">
+						<option>
+							Formoid
+						</option>
+						<option>
+							Something
+						</option>
+						<option>
+							Something
+						</option>
+					</select>
+				</div>
+				<div class="input">
+					<label for="version">Version:*</label>
+					<input type="text" id="version" name="version"/>
+				</div>
+				<div class="input">
+					<label for="license">License:</label>
+					<div class="radio-input">
+						<div class="rad">
+							<input type="radio" name="license" id="free"/>
+							<label for="free">
+								Free
+							</label>
+						</div>
+						<div class="rad">
+							<input type="radio" name="license" id="business"/>
+							<label for="business"> 
+								Business
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="input">
+					<label for="severity">Severity:</label>
+					<select name="severity" id="severity">
+						<option>
+							Critical
+						</option>
+						<option>
+							Important
+						</option>
+						<option>
+							Low
+						</option>
+					</select>
+				</div>
+				<div class="input">
+					<label for="file">
+						Attachment
+					</label>
+					<label class="upload_file" for="file">
+						<div>
+							No file selected
+							<span>
+								Choose File
+							</span>
+						</div>
+					</label>
+					<input type="file" name="file" id="file"/>
+				</div>
+				<hr>
+				<div class="submit">
+					<button class="btn">
+						Send
+					</button>
+				</div>
+				</form>
+			</article>
+		</div>
+	</body>
+</html>

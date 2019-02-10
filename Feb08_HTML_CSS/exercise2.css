@@ -1,0 +1,134 @@
+body{
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+header{
+	color: #4c9696;
+	margin: 0px;
+}
+header>h1{
+	float: left;
+}
+nav{
+	float: right;
+	padding: 1.4rem;
+}
+nav>div{
+	float: left;
+	padding-left: 1.4rem;
+	padding-top: 0.4rem;
+}
+header>hr{
+	clear: both;
+}
+article{
+	margin: 1rem auto;
+	width: 460px;
+	border : solid #bcc3ca ; 	
+	border-radius: 10px;
+}
+article>h2{
+	margin: 0;
+	padding: 1rem;
+	background-color: #bcc3ca;
+	color: white;
+}
+.input{
+	width: 90%;
+	margin: 1rem auto;
+}
+.input>label{
+	color: #888888;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+.input>textarea{
+	padding: 0;
+	height: 4rem;
+	padding-top: 5px;
+}
+
+.input>input,.input>textarea{
+	border: solid #bdc3c7 2px;
+	border-radius: 5px;
+	width: 100%;
+	padding-left: 5px;
+	color: #666;
+	caret-color: #bcc3ca;
+}
+.input>input,.input>select{
+	height: 2rem;
+}
+.input>select{
+	font-weight: 900;
+	width:102%;
+	background-color: #64be9c;
+	border-radius: 5px;
+	color: white;
+	padding: 5px;
+}
+.input>select>option{
+    font-weight: 900;
+}
+.input>input:focus,.input>textarea:focus,.input>select:focus{
+	outline: lightblue solid 1px;
+}
+.input>input#version{
+	display: block;
+	width: 25%;
+}
+.radio-input{
+	display: flex;
+}
+.radio-input>.rad>label{
+	color: #888888;
+}
+.radio-input>.rad{
+	flex: 1;
+	width: 100%;
+}
+.input>input[type="file"]{
+	opacity: 0;
+	position: absolute;
+	width: 0;
+}
+.upload_file{
+	width: 98%;
+	border: solid #bdc3c7 2px;
+	border-radius: 5px;
+	padding: 5px;
+	position: relative;
+	margin-bottom: 0px !important;
+}
+.upload_file span{
+	padding: 5px 5px 5px 5px;
+	color: white;
+	right: 0;
+	top: 0;
+	left: 5;
+	position: absolute;
+	display: inline-block;
+	background-color: #bdc3c7;
+}
+.input:last-child{
+	margin-bottom: 0px!important;
+}
+hr{
+	margin: 0;
+	border: solid #bdc3c7 1px;
+}
+.submit{
+    background-color: #edeff1;
+    border-radius: 0px 5px 5px;
+    text-align: right;
+    padding: 1rem 0rem;
+}
+.submit>.btn{
+	background-color: #64be9c;
+	border-radius: 5px;
+	border:none;
+	color: white;
+	padding: 0.6rem;
+	font-size: 1rem;
+	margin-right: 1.5rem;
+}
