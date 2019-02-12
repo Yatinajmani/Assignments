@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 1</title>
+</head>
+<body>
+	<span id="interest">		
+	</span>
+</body>
+<script type="text/javascript">
+	var principle = prompt('Enter Principle');
+	var rate = prompt('Enter Rate');
+	var time = prompt('Enter Time');
+	var si=Number.parseInt(principle)*Number.parseInt(rate)*Number.parseInt(time)/100;
+	if(!Number.isNaN(si)){
+		document.getElementById('interest').innerHTML="Simple Interest is : "+si;	
+	}else{
+		document.getElementById('interest').innerHTML="Enter Numeric Values";
+	}
+</script>
+</html>
