@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 3</title>
+</head>
+<body>
+	<div id="area"></div>
+</body>
+<script type="text/javascript">
+	var radius = prompt('Enter radius.');
+	var area=Number.parseInt(radius)*Number.parseInt(radius)*Math.PI;
+	if(!Number.isNaN(area)){
+		document.getElementById('area').innerHTML="Area is : "+area;	
+	}else{
+		document.getElementById('area').innerHTML="Enter Numeric Values";
+	}
+</script>
+</html>
