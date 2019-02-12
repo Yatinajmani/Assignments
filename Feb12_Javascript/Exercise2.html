@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 2</title>
+</head>
+<body>
+	<div id="rev"></div>
+	<div id="pal"></div>
+</body>
+<script type="text/javascript">
+	var str = prompt('Enter a string.');
+	var rev=str.split("",).reverse().join("");
+	document.getElementById('rev').innerHTML="Reverse is : "+rev;
+	if(str==rev){
+		document.getElementById('pal').innerHTML=str+" is Pallindrome."
+	}else{
+		document.getElementById('pal').innerHTML=str+" is not a Pallindrome."
+	}
+</script>
+</html>
