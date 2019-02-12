@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 5</title>
+</head>
+<body>
+	Current Data : 
+	<div id="data"></div>
+	<button onclick="add()">Add Employee</button> 
+	<button onclick="filter_by_sal()">Filter By Salary</button> 
+	<button onclick="group_by_age()">Filter By Age</button> 
+	<button onclick="increment()">Increment Salary</button> 
+	<div id="filterData"></div>
+	<div id="groupByAge"></div>
+	<div id="incrementedData"></div>
+</body>
+<script type="text/javascript">
+	var emp=[{Name:"Yatin Ajmani", age:24, salary:1000000 ,DOB:"01/01/1995"},{Name: "name", age: 54, salary: 1000, DOB: "8/2/1999"}];
+	function serialize(object) {
+		var str="";
+		for (x in object) {
+			str+=x+" : "+object[x]+"<br>";
+		}
+		return str;
+	}
+	document.getElementById('data').innerHTML="<br>"+serialize(emp[0]);
+	document.getElementById('data').innerHTML+="<br>"+serialize(emp[1]);
+	function add() {
+		var name=prompt('Enter Name');
+		if(name===""||name===null){
+			alert("Invalid Name.");
+			return;
+		}
+		var age=Number.parseInt(prompt('Enter Age'));
+		if(isNaN(age)){
+			alert("Invalid Age.");
+			return;
+		}
+		var salary=Number.parseInt(prompt('Enter Salary'));
+		if(isNaN(salary)){
+			alert("Invalid Salary.");
+			return;
+		}
+		var DOB=new Date(prompt('Enter DOB'));
+		if(isNaN(DOB.valueOf())){
+			alert("Invalid Date.");
+			return;
+		}
+		date=(DOB.getMonth()+1)+"/"+DOB.getDate()+"/"+DOB.getFullYear();
+		emp.push({Name:name, age:age, salary:salary ,DOB:date});
+		document.getElementById('data').innerHTML+="<br>"+serialize({Name:name, age:age, salary:salary ,DOB:date});		
+	}
+	function filter_by_sal() {
+		document.getElementById('filterData').innerHTML="Filtered Data :";
+		var salary=Number.parseInt(prompt('Enter Salary'));
+		if(isNaN(salary)){
+			alert("Invalid Salary.");
+			return;
+		}
+		var result=emp.filter(obj=>{return obj.salary>salary});
+		result.forEach(obj=> document.getElementById('filterData').innerHTML+="<br>"+serialize(obj));
+	}
+	function group_by_age() {
+		document.getElementById('groupByAge').innerHTML="Grouped Data :";
+		var ages=new Map();
+		emp.forEach(
+			obj=>{
+				if(!ages.has(obj.age)){
+					ages.set(obj.age,[obj]);
+				}
+				else{
+					ages.get(obj.age).push(obj);
+				}
+			});
+		ages.forEach(obj=>obj.forEach(obj1=>document.getElementById('groupByAge').innerHTML+="<br>"+serialize(obj1)));
+	}
+	function increment() {
+		document.getElementById('data').innerHTML="";
+		emp.map(obj=>{(obj.salary>1000&&obj.age>20)?obj.salary*= 5 : obj.salary});
+		emp.forEach(obj=> document.getElementById('data').innerHTML+="<br>"+serialize(obj));
+	}
+</script>
+</html>
