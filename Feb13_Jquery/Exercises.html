@@ -124,6 +124,15 @@ crossorigin="anonymous"></script>
 			e.stopPropagation();
 		});
 
+		// Exercise 13
+		var h=0;
+		$("body").children().each(function(){
+			if(h<$(this).height()){
+				h=$(this).height();
+			}
+		});
+		console.log("Max height : ",h);
+
 	});
 </script>
 </html>
