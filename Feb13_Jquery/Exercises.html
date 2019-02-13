@@ -66,6 +66,10 @@
 			<td>94</td>
 		</tr>
 	</table>
+
+	<div id="e15">
+		Exersice 15
+	</div>
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -162,6 +166,12 @@ crossorigin="anonymous"></script>
 				$(this).css('color',"red");
 			}
 		});
+
+		// Exercise 15
+        $.ajax({url: "https://jsonplaceholder.typicode.com/todos/1",success:function(data) {
+			$("#e15").append("<br>"+JSON.stringify(data));
+	    }});
+
 	});
 </script>
 </html>
