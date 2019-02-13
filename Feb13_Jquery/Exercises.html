@@ -70,6 +70,34 @@
 	<div id="e15">
 		Exersice 15
 	</div>
+
+	<table border="1" id="e16">
+		<tr>
+			<th>Firstname</th>
+			<th>Lastname</th> 
+			<th>Age</th>
+			<th>Remove</th>
+		</tr>
+		<tr data-id="1">
+			<td>Jill</td>
+			<td>Smith</td> 
+			<td>50</td>
+			<td><button>Remove</button></td>
+		</tr>
+		<tr data-id="2">
+			<td>Helina</td>
+			<td>Mack</td> 
+			<td>8</td>
+			<td><button>Remove</button></td>
+		</tr>
+		<tr data-id="3">
+			<td>Eve</td>
+			<td>Jackson</td> 
+			<td>94</td>
+			<td><button>Remove</button></td>
+		</tr>
+	</table>
+
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -172,6 +200,12 @@ crossorigin="anonymous"></script>
 			$("#e15").append("<br>"+JSON.stringify(data));
 	    }});
 
+		// Exercise 16
+		$("#e16 button").click(function(e){
+	        $.ajax({url: "https://jsonplaceholder.typicode.com/posts/"+$(e.target).parent().parent().data("id"),method:"delete",success:function(data) {
+	        	$(e.target).parent().parent().remove();
+		    }});
+		});
 	});
 </script>
 </html>
