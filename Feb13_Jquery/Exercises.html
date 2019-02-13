@@ -43,6 +43,29 @@
 			<li>Value 3</li>
 		</ul>
 	</div>
+
+	<table border="1" id="e14">
+		<tr>
+			<th>Firstname</th>
+			<th>Lastname</th> 
+			<th>Age</th>
+		</tr>
+		<tr>
+			<td>Jill</td>
+			<td>Smith</td> 
+			<td>50</td>
+		</tr>
+		<tr>
+			<td>Helina</td>
+			<td>Mack</td> 
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>Eve</td>
+			<td>Jackson</td> 
+			<td>94</td>
+		</tr>
+	</table>
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -133,6 +156,12 @@ crossorigin="anonymous"></script>
 		});
 		console.log("Max height : ",h);
 
+		// Exercise 14
+		$("#e14 td").each(function(e){
+			if(!isNaN($(this).text())&&$(this).text()>10){
+				$(this).css('color',"red");
+			}
+		});
 	});
 </script>
 </html>
