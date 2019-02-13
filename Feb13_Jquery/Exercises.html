@@ -29,6 +29,12 @@
 		<li>Value 2</li>
 		<li>Value 3</li>
 	</ul>
+	<div>
+		Exersice 11
+		<a id="e11" href="https://www.google.com">
+			Google
+		</a>
+	</div>
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -95,6 +101,12 @@ crossorigin="anonymous"></script>
 		$("#e10>li").click(function(e){
 			$("#e10>li:first").text(e.target.innerText).css('background-color','buttonface');
 		});
+
+		// Exercise 11
+		$("#e11").click(function(e){
+			e.preventDefault();
+		});
+
 
 	});
 </script>
