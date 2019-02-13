@@ -6,6 +6,7 @@
 <body>
 	<p>Exercise 1</p>
 	<p id="test">Exercise 2</p>
+	<p class="some-new">Exercise 3</p>
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -19,6 +20,9 @@ crossorigin="anonymous"></script>
 
 		// Exerise 2
 		$("#test").addClass("load");
+
+		// Exerise 3
+		$("[class$='-new']").css("color","red");
 
 	});
 </script>
