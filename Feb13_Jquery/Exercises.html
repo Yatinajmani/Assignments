@@ -98,6 +98,14 @@
 		</tr>
 	</table>
 
+
+	<div>
+		Exercise 17
+		<p>
+			<img id="e17" src="" height="150" width="150"/>
+			<button>Next Image</button>
+		</p>
+	</div>
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -196,15 +204,25 @@ crossorigin="anonymous"></script>
 		});
 
 		// Exercise 15
-        $.ajax({url: "https://jsonplaceholder.typicode.com/todos/1",success:function(data) {
+		$.ajax({url: "https://jsonplaceholder.typicode.com/todos/1",success:function(data) {
 			$("#e15").append("<br>"+JSON.stringify(data));
-	    }});
+		}});
 
 		// Exercise 16
 		$("#e16 button").click(function(e){
-	        $.ajax({url: "https://jsonplaceholder.typicode.com/posts/"+$(e.target).parent().parent().data("id"),method:"delete",success:function(data) {
-	        	$(e.target).parent().parent().remove();
-		    }});
+			$.ajax({url: "https://jsonplaceholder.typicode.com/posts/"+$(e.target).parent().parent().data("id"),method:"delete",success:function(data) {
+				$(e.target).parent().parent().remove();
+			}});
+		});
+
+		// Exercise 17
+		var img_src=["https://via.placeholder.com/150/0000FF/808080?Text=Digital.com","https://via.placeholder.com/150/FF0000/FFFFFF?Text=Down.com","https://via.placeholder.com/150/FFFF00/000000?Text=WebsiteBuilders.com","https://via.placeholder.com/150/000000/FFFFFF/?text=IPaddress.net"]
+		$("#e17").attr("src","https://via.placeholder.com/150/000000/FFFFFF/?text=IPaddress.net");
+		$("#e17~button").click(function(e) {
+			$("#e17").animate({opacity:"0"},500,function(){
+				$("#e17").attr("src",img_src[Math.floor(Math.random()*img_src.length)]);
+				$("#e17").css("opacity","1");
+			});
 		});
 	});
 </script>
