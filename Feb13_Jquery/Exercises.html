@@ -35,6 +35,14 @@
 			Google
 		</a>
 	</div>
+	<div id="e12">
+		Exersice 12
+		<ul>
+			<li>Value 1</li>
+			<li>Value 2</li>
+			<li>Value 3</li>
+		</ul>
+	</div>
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -107,6 +115,14 @@ crossorigin="anonymous"></script>
 			e.preventDefault();
 		});
 
+		// Exercise 12
+		$("#e12").click(function(e){
+			$("#e12").append("div clicked<br>");
+		});
+		$("#e12 li").click(function(e){
+			$("#e12").append("li clicked<br>");
+			e.stopPropagation();
+		});
 
 	});
 </script>
