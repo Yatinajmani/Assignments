@@ -8,6 +8,10 @@
 	<p id="test">Exercise 2</p>
 	<p class="some-new">Exercise 3</p>
 	<button id="btn">Exercise 4</button>
+	<div id="main">
+		<p class="target">Exercise 5</p>
+		<p class="target">Exercise 5</p>
+	</div>
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -27,6 +31,9 @@ crossorigin="anonymous"></script>
 
 		// Exerise 4
 		$("#btn").attr("disabled","true");
+
+		// Exerise 5
+		$("#main").children(".target").css("font-size","larger");
 
 	});
 </script>
