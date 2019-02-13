@@ -14,6 +14,14 @@
 	</div>
 	<div id="e6">Exercise 6</div>
 	<button id="e7">Exercise 7</button>
+
+	<div id="e9">
+		Exercise 9
+		<select id="e9select">
+			<option>Value 1</option>
+			<option>Value 2</option>
+		</select>
+	</div>
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -52,6 +60,12 @@ crossorigin="anonymous"></script>
 		$("#e8").on('click',function(){
 			$("#e8").text("Exercise 8 Changed");
 		});
+
+		// Exerise 9
+		$("#e9select").on('change',function(){
+			$("#e9").append($("#e9select").val());
+		});
+
 	});
 </script>
 </html>
