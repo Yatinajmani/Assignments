@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PPT Exercise</title>
+</head>
+<body>
+	<button type="button">Toggle</button>
+	<p id="hi">hi</p>
+	<p id="he">hello</p>
+	<input type="text" id="input"/>
+	<p id="inp"></p>
+</body>
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#he").toggle();
+		$("button").click(function(){
+			$("#he").toggle();
+			$("#hi").toggle();
+		});
+		$("#input").keydown(function(a){
+			if(a.keyCode==13){
+				$("#inp").text($("#input").val());
+			}
+		})
+	});
+</script>
+</html>
