@@ -22,6 +22,13 @@
 			<option>Value 2</option>
 		</select>
 	</div>
+
+	<ul id="e10">
+		<li>Value 1</li>
+		<li>Value 1</li>
+		<li>Value 2</li>
+		<li>Value 3</li>
+	</ul>
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -33,37 +40,60 @@ crossorigin="anonymous"></script>
 		// Exercise 1
 		console.log("Hello World");
 
-		// Exerise 2
+		// Exercise 2
 		$("#test").addClass("load");
 
-		// Exerise 3
+		// Exercise 3
 		$("[class$='-new']").css("color","red");
 
-		// Exerise 4
+		// Exercise 4
 		$("#btn").attr("disabled","true");
 
-		// Exerise 5
+		// Exercise 5
 		$("#main").children(".target").css("font-size","larger");
 
-		// Exerise 6
+		// Exercise 6
 		$("#e6").replaceWith("<p>Exercise 6</p>");
 
-		// Exerise 7
+		// Exercise 7
 		$("#e7").click(function(){
 			var $x=$("#e7").clone();
 			$x.removeAttr("id");
 			$("#e7").after($x);
 		});
 
-		// Exerise 8
+		// Exercise 8
 		$("#e7").after("<p id='e8'>Exercise 8</p>");
 		$("#e8").on('click',function(){
 			$("#e8").text("Exercise 8 Changed");
 		});
 
-		// Exerise 9
+		// Exercise 9
 		$("#e9select").on('change',function(){
 			$("#e9").append($("#e9select").val());
+		});
+
+		// Exercise 10
+		$("#e10").css({'display':'inline-block'});
+		$("#e10").children().css({'list-style':'none','padding':'0px 0.9em 0px','background-color':'white','box-sizing': 'border-box','align-items': 'center','-webkit-rtl-ordering': 'logical','color': 'black','cursor': 'default','border-width': '1px','border-style': 'solid','display':'block'});
+		$("#e10").children().hide();
+		$("#e10").children(":first").show().css({'display':'inline-block','-webkit-appearance':"menulist",'background-color':'buttonface'});
+		$("#e10").hover(function(){
+			$("#e10").children().toggle();
+			$("#e10").children(":first").toggle();
+		},function(){
+			$("#e10").children().toggle();
+			$("#e10").children(":first").toggle();
+		});
+		$("#e10>li").hover(function(e){
+			$(e.target).css('background-color','grey')
+			$("#e10>li:first").css('background-color','buttonface');
+		},function(e){
+			$(e.target).css('background-color','white')
+			$("#e10>li:first").css('background-color','buttonface');
+		});
+		$("#e10>li").click(function(e){
+			$("#e10>li:first").text(e.target.innerText).css('background-color','buttonface');
 		});
 
 	});
