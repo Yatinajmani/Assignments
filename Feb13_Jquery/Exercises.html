@@ -7,6 +7,7 @@
 	<p>Exercise 1</p>
 	<p id="test">Exercise 2</p>
 	<p class="some-new">Exercise 3</p>
+	<button id="btn">Exercise 4</button>
 </body>
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -23,6 +24,9 @@ crossorigin="anonymous"></script>
 
 		// Exerise 3
 		$("[class$='-new']").css("color","red");
+
+		// Exerise 4
+		$("#btn").attr("disabled","true");
 
 	});
 </script>
