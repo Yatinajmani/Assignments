@@ -151,10 +151,13 @@ crossorigin="anonymous"></script>
 		});
 
 		// Exercise 10
-		$("#e10").css({'display':'inline-block'});
-		$("#e10").children().css({'list-style':'none','padding':'0px 0.9em 0px','background-color':'white','box-sizing': 'border-box','align-items': 'center','-webkit-rtl-ordering': 'logical','color': 'black','cursor': 'default','border-width': '1px','border-style': 'solid','display':'block'});
+		$("#e10").css({'display':'inline-block','position':"relative","bottom":"10px"});
+		$("#e10").children().css({'list-style':'none','padding':'0px 0.9em 0px','background-color':'white','box-sizing': 'border-box','align-items': 'center','-webkit-rtl-ordering': 'logical','color': 'black','cursor': 'default','border-width': '1px','border-style': 'solid','position':"absolute"});
 		$("#e10").children().hide();
-		$("#e10").children(":first").show().css({'display':'inline-block','-webkit-appearance':"menulist",'background-color':'buttonface'});
+		$("#e10").children(":first").show().css({'display':'inline-block','-webkit-appearance':"menulist",'background-color':'buttonface','position':"relative"});
+		for (var i = $("#e10 li").length - 1; i >= 1; i--) {
+			$("#e10").children().eq(i).css("top",20*i+"px");
+		}
 		$("#e10").hover(function(){
 			$("#e10").children().toggle();
 			$("#e10").children(":first").toggle();
